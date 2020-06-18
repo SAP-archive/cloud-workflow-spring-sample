@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: sap-cloud-workflow-spring-sample
+  name: sap-cloud-workflow-spring-sample
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sap-cloud-workflow-spring-sample
+  template:
+    metadata:
+      labels:
+        app: sap-cloud-workflow-spring-sample
+    spec:
+      containers:
+      - image: sap-cloud-workflow-spring-sample:0.0.1-SNAPSHOT
+        name: sap-cloud-workflow-spring-sample
+        envFrom:
+          - secretRef:
+              name: sap-cloud-workflow-spring-sample-secret

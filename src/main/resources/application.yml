@@ -1,0 +1,12 @@
+uaa:
+  url: ${UAA_URL}
+  clientId: ${UAA_CLIENTID}
+  clientSecret: ${UAA_CLIENTSECRET}
+
+endpoints:
+  workflow:
+    rest:
+      url:
+        base: ${ENDPOINTS_WORKFLOW_REST_URL}
+        definition: "/v1/workflow-definitions"
+        instance: "/v1/workflow-instances"
