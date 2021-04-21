@@ -6,7 +6,7 @@ This sample illustrates the essentials for calling a SAP Business Technology Pla
 
 **An Important Message Regarding Indirect Use of SAP APIs**   |
 ------------------------------------------------------------- |
-There may be a licensing impact in using SAP APIs from an external application such as what's described in this code sample. This is especially true if API requests are being made on behalf of users who are not already covered by your SAP Licensing or Subscription agreements. You should consult [this document](https://www.sap.com/documents/2019/05/eadfa9d2-4a7d-0010-87a3-c30de2ffd8ff.html) and your local SAP representative to understand the business and licensing impact for production use of SAP APIs such as the SAP Cloud Platform Workflow Service described in this sample. |
+There may be a licensing impact in using SAP APIs from an external application such as what's described in this code sample. This is especially true if API requests are being made on behalf of users who are not already covered by your SAP Licensing or Subscription agreements. You should consult [this document](https://www.sap.com/documents/2019/05/eadfa9d2-4a7d-0010-87a3-c30de2ffd8ff.html) and your local SAP representative to understand the business and licensing impact for production use of SAP APIs such as the SAP Workflow service described in this sample. |
 
 # Overview
 - [Invoking the SAP Workflow service APIs from outside of SAP BTP](#invoking-the-sap-workflow-service-apis-from-outside-of-sap-business-technology-platform)
