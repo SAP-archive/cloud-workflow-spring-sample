@@ -1,7 +1,7 @@
-# Invoking the SAP Cloud Platform Workflow Service APIs from outside of SAP Cloud Platform
-This sample illustrates the essentials for calling a SAP Cloud Platform service API from a 
- Java Spring Boot application running outside of SAP Cloud Platform. This code targets the SAP
- Cloud Platform Workflow service, but the same essentials would apply to most SAP Cloud Platform
+# Invoking the SAP Workflow service APIs from outside of SAP Business Technology Platform
+This sample illustrates the essentials for calling a SAP Business Technology Platform (BTP) service API from a 
+ Java Spring Boot application running outside of SAP BTP. This code targets the SAP
+ Workflow service, but the same essentials would apply to most SAP BTP
  service APIs.
 
 **An Important Message Regarding Indirect Use of SAP APIs**   |
@@ -9,7 +9,7 @@ This sample illustrates the essentials for calling a SAP Cloud Platform service 
 There may be a licensing impact in using SAP APIs from an external application such as what's described in this code sample. This is especially true if API requests are being made on behalf of users who are not already covered by your SAP Licensing or Subscription agreements. You should consult [this document](https://www.sap.com/documents/2019/05/eadfa9d2-4a7d-0010-87a3-c30de2ffd8ff.html) and your local SAP representative to understand the business and licensing impact for production use of SAP APIs such as the SAP Cloud Platform Workflow Service described in this sample. |
 
 # Overview
-- [Invoking the SAP Cloud Platform Workflow Service APIs from outside of SAP Cloud Platform](#invoking-the-sap-cloud-platform-workflow-service-apis-from-outside-of-sap-cloud-platform)
+- [Invoking the SAP Workflow service APIs from outside of SAP BTP](#invoking-the-sap-workflow-service-apis-from-outside-of-sap-business-technology-platform)
 - [Overview](#overview)
 - [Description](#description)
 - [Prerequisites](#prerequisites)
@@ -33,17 +33,17 @@ The application exposes two API endpoints on port `8080`
 - POST `/workflow/instance/new`
     - triggers the creation of a new workflow instance
 
-Both endpoints connect to the SAP Cloud Platform Workflow Service. 
- To successfully make connection to the Workflow Service, application first
+Both endpoints connect to the SAP Workflow service. 
+ To successfully make connection to the Workflow service, application first
  makes a call to XSUAA, the XSA OAuth 2.0 authorization server, running on SAP
- Cloud Platform to request a JWT access token. Then, using the JWT token as an 
+ BTP to request a JWT access token. Then, using the JWT token as an 
  `Authorization` header, Workflow APIs are invoked.
 
-To make a successful call to both authorization server and Workflow Service,
+To make a successful call to both authorization server and Workflow service,
  application requires four environment variables to be set: `UAA_URL`, 
  `UAA_CLIENTID`, `UAA_CLIENTSECRET`, and `ENDPOINTS_WORKFLOW_REST_URL`. 
  The exact values for these environment variables are instance-specific to the 
- XSUAA service running in your SAP Cloud Platform Cloud Foundry Space. Values 
+ XSUAA service running in your SAP BTP, Cloud Foundry environment space. Values 
  were issued by the Cloud Foundry Service Broker when the XSUAA instance was created.
 
 Two Workflow API endpoints utilized in the application are 
@@ -59,13 +59,13 @@ Two Workflow API endpoints utilized in the application are
 # Prerequisites
 Reasonably current versions of a Java JDK and Gradle are required to compile and run this sample.
 
-Calling any SAP Cloud Platform service typically requires that you create an instance of that
+Calling any SAP BTP service typically requires that you create an instance of that
  service first. If you don't have an instance of the Workflow service, you can use the exercises
- described in the [SAP Cloud Platform Workflow CodeJam](https://github.com/SAP-samples/cloud-workflow-codejam)
+ described in the [SAP Workflow CodeJam](https://github.com/SAP-samples/cloud-workflow-codejam)
  to create the Workflow and XSUAA services required in this sample.
 
-Successful completion of Cloud Workflow CodeJam should give you the following:
-- Workflow Service running in SAP Cloud Platform
+Successful completion of SAP Workflow CodeJam should give you the following:
+- Workflow Service running in SAP BTP
 - An instance of the XSUAA authorization service
 - User assigned with correct roles
 - One Workflow Definition defined
@@ -328,7 +328,7 @@ Once uploaded to a container registry, follow the same steps as local Kubernetes
     ```
 
 # Resources
-- [What is SAP Cloud Platform Workflow](https://help.sap.com/viewer/16e4ca742bd742e98184ef1e53d2ec2d/Cloud/en-US/a3220658f2dc46a48e47614aa2a2c663.html)
+- [What is SAP Workflow](https://help.sap.com/viewer/16e4ca742bd742e98184ef1e53d2ec2d/Cloud/en-US/a3220658f2dc46a48e47614aa2a2c663.html)
 - [API Business Hub - Workflow Endpoints](https://api.sap.com/api/SAP_CP_Workflow_CF/resource)
 
 # License
