@@ -1,3 +1,5 @@
+<!--[![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/cloud-workflow-spring-sample)](https://api.reuse.software/info/github.com/SAP-samples/cloud-workflow-spring-sample)-->
+
 # Invoking the SAP Workflow service APIs from outside of SAP Business Technology Platform
 This sample illustrates the essentials for calling a SAP Business Technology Platform (BTP) service API from a 
  Java Spring Boot application running outside of SAP BTP. This code targets the SAP
