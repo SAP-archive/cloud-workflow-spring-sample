@@ -1,6 +1,6 @@
-<!--[![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/cloud-workflow-spring-sample)](https://api.reuse.software/info/github.com/SAP-samples/cloud-workflow-spring-sample)-->
+[![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/cloud-workflow-spring-sample)](https://api.reuse.software/info/github.com/SAP-samples/cloud-workflow-spring-sample)
 
-# Invoking the SAP Workflow service APIs from outside of SAP Business Technology Platform
+# Invoking the SAP Workflow Service APIs from Outside of SAP Business Technology Platform
 This sample illustrates the essentials for calling a SAP Business Technology Platform (BTP) service API from a 
  Java Spring Boot application running outside of SAP BTP. This code targets the SAP
  Workflow service, but the same essentials would apply to most SAP BTP
@@ -157,7 +157,7 @@ There are two ways to create a docker image for spring boot project. Both requir
 1. Run the following command to validate that image has been created successfully.
     ```
     docker images 
-    ``` 
+    ```
     
     Output should look similar to below
     ```
@@ -191,7 +191,7 @@ Spring Boot 2.3.0.RELEASE includes [buildpack](https://buildpacks.io/) support f
 1. Run the following command to validate that image has been created successfully.
     ```
     docker images 
-    ``` 
+    ```
     
     Output should look similar to below
     ```
@@ -249,7 +249,7 @@ This quickstart requires a Kubernetes Cluster running locally and `kubectl` CLI
 You were able to use a local image for your local Kubernetes cluster, but once you start
  using Kubernetes service from different hyperscalers, you will need to start thinking about
  where to pull your images from. 
- 
+
 There are two types of registries you can choose from
 1. A public registry like [Docker Hub](https://hub.docker.com/)
 1. A private registry like [AWS Elastic Container Registry](https://aws.amazon.com/ecr/),
